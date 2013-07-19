@@ -2,19 +2,20 @@
 # @@ScriptName: app.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:44:48
-# @@Modify Date: 2013-07-18 10:14:03
+# @@Modify Date: 2013-07-18 13:11:42
 # @@Function:
 #*********************************************************/
 
 /* jshint laxcomma:true */
 
 var express = require('express')
-  , config = require('./config');
+  , config = require('./config')
+  , mongoose = require('mongoose');
 
 var app = module.exports = express.createServer();
 
 // Connect to mongo db
-mongoose.connect(config.mongo.db);
+mongoose.connect(config.database.connectionString);
 
 // Configuration
 

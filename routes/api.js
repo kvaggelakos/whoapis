@@ -2,12 +2,12 @@
 # @@ScriptName: api.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:27:04
-# @@Modify Date: 2013-07-18 08:46:42
+# @@Modify Date: 2013-07-18 13:11:58
 # @@Function:
 #*********************************************************/
 
 
-var responder = require('responder');
+var responder = require('../classes/responder');
 
 module.exports = function(app) {
     // Include the whois api

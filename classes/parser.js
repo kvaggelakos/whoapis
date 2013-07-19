@@ -2,7 +2,7 @@
 # @@ScriptName: parser.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 12:04:52
-# @@Modify Date: 2013-07-18 12:40:00
+# @@Modify Date: 2013-07-18 21:53:56
 # @@Function:
 #*********************************************************/
 
@@ -12,17 +12,13 @@ exports.values = ['email', 'phone'];
 
 exports.parse = function(text) {
   var results = {};
-
   // Try to extract any emails
-  _.extend(results,
-    {email: extractEmails(text)}
-  );
+  results['email'] = extractEmails(text);
 
   // Try to parase out any phone number
-  _.extend(results,
-    {phone: extractPhone(text)}
-  );
+  results['phone'] = extractPhone(text);
 
+  return results;
 };
 
 function extractEmails(text) {
