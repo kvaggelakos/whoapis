@@ -2,7 +2,7 @@
 # @@ScriptName: app.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:44:48
-# @@Modify Date: 2013-07-18 13:11:42
+# @@Modify Date: 2013-07-19 16:43:36
 # @@Function:
 #*********************************************************/
 
@@ -42,7 +42,8 @@ require('./routes/api')(app);
 // Include web site
 require('./routes/pages')(app);
 
-
-app.listen(3000, function(){
+// Start server
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
