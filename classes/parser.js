@@ -2,11 +2,9 @@
 # @@ScriptName: parser.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 12:04:52
-# @@Modify Date: 2013-07-18 21:53:56
+# @@Modify Date: 2013-07-19 16:36:58
 # @@Function:
 #*********************************************************/
-
-var _ = require('underscore');
 
 exports.values = ['email', 'phone'];
 
