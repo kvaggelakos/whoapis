@@ -2,7 +2,7 @@
 # @@ScriptName: config.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:55:58
-# @@Modify Date: 2013-07-19 16:22:15
+# @@Modify Date: 2013-07-19 16:28:02
 # @@Function:
 #*********************************************************/
 
@@ -28,7 +28,7 @@ config.database.username = 'heroku_app17018598';
 config.database.password = process.env.MONGO_LAB_PW;
 config.database.host = 'ds035488.mongolab.com:35488';
 config.database.collection = 'heroku_app17018598';
-config.database.connectionString = 'mongodb://' + config.database.username + ':' + config.database.password +
+config.database.connectionString = 'mongodb://' + config.database.username + ':' + config.database.password + '@' +
   config.database.host + '/' + config.database.collection;
 
 // Error codes
