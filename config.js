@@ -2,7 +2,7 @@
 # @@ScriptName: config.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:55:58
-# @@Modify Date: 2013-07-18 22:23:36
+# @@Modify Date: 2013-07-19 16:22:15
 # @@Function:
 #*********************************************************/
 
@@ -24,9 +24,12 @@ config.whois.timeout = 5000;
 
 // Database information
 config.database = {};
-config.database.host = 'localhost';
-config.database.collection = 'whoapis';
-config.database.connectionString = 'mongodb://' + config.database.host + '/' + config.database.collection;
+config.database.username = 'heroku_app17018598';
+config.database.password = process.env.MONGO_LAB_PW;
+config.database.host = 'ds035488.mongolab.com:35488';
+config.database.collection = 'heroku_app17018598';
+config.database.connectionString = 'mongodb://' + config.database.username + ':' + config.database.password +
+  config.database.host + '/' + config.database.collection;
 
 // Error codes
 config.errors = {};
