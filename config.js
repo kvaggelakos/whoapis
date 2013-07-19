@@ -2,7 +2,7 @@
 # @@ScriptName: config.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:55:58
-# @@Modify Date: 2013-07-18 20:47:33
+# @@Modify Date: 2013-07-18 22:23:36
 # @@Function:
 #*********************************************************/
 
@@ -32,5 +32,6 @@ config.database.connectionString = 'mongodb://' + config.database.host + '/' + c
 config.errors = {};
 config.errors.paramters = {errorCode: 1, errorMsg: 'You did not specify enough parameters, please check your request'};
 config.errors.whois = {errorCode: 2, errorMsg: 'There was an error in contacting the whois server'};
+config.errors.apiNotFound =  {errorCode: 3, errorMsg: 'API call was not found'};
 
 module.exports = config;
