@@ -2,7 +2,7 @@
 # @@ScriptName: app.js
 # @@Author: Konstantinos Vaggelakos<kozze89@gmail.com>
 # @@Create Date: 2013-07-18 08:44:48
-# @@Modify Date: 2013-07-19 16:43:36
+# @@Modify Date: 2013-07-20 16:02:21
 # @@Function:
 #*********************************************************/
 
@@ -10,7 +10,8 @@
 
 var express = require('express')
   , config = require('./config')
-  , mongoose = require('mongoose');
+  , mongoose = require('mongoose')
+  , path = require('path');
 
 var app = module.exports = express.createServer();
 
@@ -24,8 +25,8 @@ app.configure(function(){
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
   app.use(express.methodOverride());
+  app.use(express.static(path.join(__dirname, 'public')));
   app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
