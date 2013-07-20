@@ -4,7 +4,7 @@ WhoAPIs is an API for whois querying. This api will cache the responses in order
 
 # Usage
 ```bash
-curl whoapis.herokuapp.com/api/v1/whois/query/www.att.com
+curl whoapis.com/api/v1/whois/query/www.google.com
 ```
 
 # Documentation
